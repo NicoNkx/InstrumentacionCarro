@@ -41,6 +41,9 @@ void loop() {
   digitalWrite(pwmA, 0);
   digitalWrite(pwmB, 0);
   delay(200);
+  giro(150,255);
+  delay(2000);
+  
 
 }
 void adelante(){
@@ -66,4 +69,13 @@ void stop(){
   digitalWrite(Bin1, 0);
   digitalWrite(Bin2, 0);
   
+}
+void giro(int izq,int der){
+
+  digitalWrite(Ain1, 1);
+  digitalWrite(Ain2, 0);
+  digitalWrite(Bin1, 1);
+  digitalWrite(Bin2, 0);
+  digitalWrite(pwmA, der);
+  digitalWrite(pwmB, izq);
 }
